@@ -10,7 +10,7 @@ function App() {
   const [isConnected, setIsConnected] = useState(false);
 
   const vncUrl = process.env.REACT_APP_VNC_URL;
-
+  console.log('VNC URL -> ', vncUrl);
   const handleConnect = useCallback(() => {
     setError('');
     if (!password) {
