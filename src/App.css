@@ -1,38 +1,159 @@
+:root {
+  --blue: #084887;
+  --red: #d20419;
+  --green: #32533d;
+  --purple: #533b4d;
+  --gray: #ada8be;
+  --white: #f6e8ea;
+  --black: #1f271b;
+}
+
+* {
+  font-family: 'Chakra Petch', sans-serif;
+}
+
 .App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://wallpaperset.com/w/full/d/3/3/499470.jpg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: bold;
   text-align: center;
+  color: var(--white);
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p {
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+  background-color: var(--blue);
+  width: 100%;
+  top: 0;
+  position: fixed;
+  box-shadow: 0 -6px 20px 15px rgba(0, 0, 0, 0.5);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header-transparent {
+  background-color: transparent;
+  width: 100%;
+  top: 0;
+  position: fixed;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.connect-btn {
+  background-color: var(--red);
+  color: var(--white);
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  font-size: 18px;
+  transition: all 300ms;
+  cursor: pointer;
+}
+
+.disconnect-btn {
+  background-color: var(--blue);
+  color: var(--white);
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  font-size: 18px;
+  transition: all 300ms;
+  cursor: pointer;
+}
+
+.disconnect-btn:hover {
+  background-color: var(--purple);
+}
+
+.connect-btn:hover {
+  background-color: var(--gray);
+  color: var(--red);
+}
+
+.connection-modal {
+  background-color: var(--black);
+  height: 50vh;
+  width: 40vw;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 1px 3px 45px 13px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
+
+.connection-modal > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.password-input {
+  background-color: var(--white);
+  border: none;
+  font-size: 22px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: all 300ms;
+  padding: 5px;
+  border: 3px solid transparent;
+  margin-bottom: 20px;
+}
+
+.password-input:focus {
+  outline: none;
+  border: 3px solid var(--red);
+}
+
+.password-input:hover {
+  border: 3px solid var(--red);
+}
+
+.error-modal {
+  background-color: var(--black);
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  box-shadow: 1px 3px 45px 13px rgba(0, 0, 0, 0.5);
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.error-message {
+  color: var(--red);
+  font-size: 22px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
