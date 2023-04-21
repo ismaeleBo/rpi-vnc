@@ -94,8 +94,6 @@ p {
 
 .connection-modal {
   background-color: var(--black);
-  height: 50vh;
-  width: 40vw;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
