@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+# React VNC Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React web application that allows you to connect to a VNC server and view its content within the browser window. You can use this app to remotely access and control a VNC server.
 
-## Available Scripts
+## Installation
 
-In the project directory, you can run:
+Before running the application, make sure you have Node.js and npm installed on your system. Follow these steps to set up and run the app:
 
-### `npm start`
+1. Clone the repository:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+   ```bash
+   git clone https://github.com/ismaeleBo/rpi-vnc.git
+   cd rpi-vnc
+   ```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. Install dependencies:
 
-### `npm test`
+   ```bash
+   npm install
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Configure the VNC server URL:
+   - Open the `.env` file and set the `REACT_APP_VNC_URL` variable to the URL of your VNC server.
 
-### `npm run build`
+4. Start the application:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   npm start
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The React VNC Web App will run locally, and you can access it in your browser at `http://localhost:3000`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
 
-### `npm run eject`
+1. Upon launching the app, you will be presented with the main screen.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Enter the VNC server password in the password input field.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Click the "Connect" button to establish a connection to the VNC server.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. If the connection is successful, you will see the VNC server content displayed within the browser window.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+5. You can use the VNC server as if it were running directly on your computer.
 
-## Learn More
+6. To disconnect from the VNC server, click the "Disconnect" button.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Features
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Connection Modal**: If you attempt to connect without entering a password, a connection modal will prompt you to enter the password.
 
-### Code Splitting
+- **Error Handling**: If there are connection errors or invalid credentials, an error message will be displayed, allowing you to retry the connection.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **Security**: The app ensures secure VNC connections by using the provided password.
 
-### Analyzing the Bundle Size
+- **Responsive**: The VNC content is displayed within the browser window and scales to fit the viewport.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Customization
 
-### Making a Progressive Web App
+You can customize the appearance and behavior of the app by modifying the React components and styles in the code provided in `App.js` and `App.css`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Contributions
 
-### Advanced Configuration
+Contributions to this project are welcome! If you'd like to contribute, please follow these steps:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. Fork the repository on GitHub.
+2. Create a branch for your work:
 
-### Deployment
+   ```bash
+   git checkout -b feature/new-feature
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+3. Make your code changes and improvements.
+4. Commit your changes with clear descriptions:
 
-### `npm run build` fails to minify
+   ```bash
+   git commit -m "Added new features"
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+5. Push your changes to your fork:
+
+   ```bash
+   git push origin feature/new-feature
+   ```
+
+6. Open a pull request on the main repository.
+
+## Bug Reporting
+
+If you encounter any bugs while using the app or have suggestions for improvements, please open an issue on GitHub with detailed information about the problem.
+
+## License
+
+This React VNC Web App is open-source and distributed under the MIT License. See the [LICENSE] file for more details.
+
+Enjoy using the React VNC Web App to remotely access and control your VNC servers from your browser!
